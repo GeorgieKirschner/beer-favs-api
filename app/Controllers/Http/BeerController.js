@@ -13,7 +13,9 @@ class BeerController {
         .fetch();
       response.send(beers);
     } else {
-      beers = await Beer.all();
+      beers = await Beer.query()
+        .with("brewery")
+        .fetch();
       response.send(beers);
     }
   }
