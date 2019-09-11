@@ -17,13 +17,13 @@ class BrewerySeeder {
   async run() {
     const breweries = [
       {
-        name: "Map Brewing"
-      },
-      {
-        name: "Bozone"
+        name: "Madison River Brewing"
       },
       {
         name: "406 Brewing"
+      },
+      {
+        name: "Map Brewing"
       }
     ];
 

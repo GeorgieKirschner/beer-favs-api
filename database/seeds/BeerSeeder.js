@@ -36,9 +36,9 @@ class BeerSeeder {
         brewery_id: 3
       },
       {
-        name: "Ghost Stout",
-        abv: 7.4,
-        ibu: 85,
+        name: "Thunder Monkey",
+        abv: 4.7,
+        ibu: 22,
         brewery_id: 2
       }
     ];

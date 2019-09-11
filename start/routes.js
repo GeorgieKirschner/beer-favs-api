@@ -16,13 +16,18 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use("Route");
 const Beer = use("App/Models/Beer");
+const Brewery = use("App/Models/Brewery");
 
 Route.get("/", () => {
   return { greeting: "Hello world in JSON" };
 });
+Route.get("/breweries", async ({ response }) => {
+  const breweries = await Brewery.all();
+  response.send(breweries);
+});
+
 Route.resource("beers", "BeerController");
 
-// Route.get("/beers", "BeerController.index");
 // Route.get("/beer/:id", "BeerController.show");
 // Route.post("/beers", "BeerController.create");
 // Route.put("/beer/:id", "BeerController.edit");
