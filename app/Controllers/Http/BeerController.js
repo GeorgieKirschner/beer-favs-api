@@ -13,7 +13,9 @@ class BeerController {
         .fetch();
       response.send(beers);
     } else {
-      beers = await Beer.all();
+      beers = await Beer.query()
+        .with("brewery")
+        .fetch();
       response.send(beers);
     }
   }
@@ -24,10 +26,10 @@ class BeerController {
   async store({ request, response }) {
     const beer = new Beer();
     const body = request.post();
-
     beer.name = body.name;
     beer.abv = body.abv;
     beer.ibu = body.ibu;
+    beer.brewery_id = body.brewery_id;
 
     await beer.save();
     const beers = await Beer.all();

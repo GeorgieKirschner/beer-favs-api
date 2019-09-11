@@ -16,8 +16,14 @@ const Factory = use("Factory");
 
 Factory.blueprint("App/Models/Beer", (faker, i, data) => {
   return {
-    name: faker.name(),
+    name: data.name,
     abv: data.abv,
-    ibu: data.ibu
+    ibu: data.ibu,
+    brewery_id: data.brewery_id
+  };
+});
+Factory.blueprint("App/Models/Brewery", (faker, i, data) => {
+  return {
+    name: data.name
   };
 });

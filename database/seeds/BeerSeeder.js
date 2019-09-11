@@ -20,17 +20,26 @@ class BeerSeeder {
       {
         name: "Salmon Honey Rye",
         abv: 4.2,
-        ibu: 60
+        ibu: 60,
+        brewery_id: 1
       },
       {
         name: "Ridge Hippie",
         abv: 4.2,
-        ibu: 15
+        ibu: 15,
+        brewery_id: 2
       },
       {
         name: "Jacks 90",
         abv: 6.1,
-        ibu: 45
+        ibu: 45,
+        brewery_id: 3
+      },
+      {
+        name: "Thunder Monkey",
+        abv: 4.7,
+        ibu: 22,
+        brewery_id: 2
       }
     ];
 
